@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d1fdf43881c134a8e6c48a0aaac691, type: 3}
+  m_Script: {fileID: 11500000, guid: af013e312723ab543a13ea18e9befea1, type: 3}
   m_Name: GoodsFish
   m_EditorClassIdentifier: 
-  _lable: "\u0420\u044B\u0431\u043A\u0430"
+  _label: 
   _description: "\u0421\u0432\u0435\u0436\u0430\u044F \u0440\u044B\u0431\u0430"
   _price: 15
-  _wallet: {fileID: 0}

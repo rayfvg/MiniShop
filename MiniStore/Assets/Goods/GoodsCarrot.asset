@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d1fdf43881c134a8e6c48a0aaac691, type: 3}
+  m_Script: {fileID: 11500000, guid: af013e312723ab543a13ea18e9befea1, type: 3}
   m_Name: GoodsCarrot
   m_EditorClassIdentifier: 
-  _lable: "\u041C\u043E\u0440\u043A\u043E\u0432\u044C"
+  _label: 
   _description: "\u041F\u043E\u043C\u044B\u0442\u0430\u044F"
   _price: 10
-  _wallet: {fileID: 0}

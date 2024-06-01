@@ -1,36 +1,47 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private List<Goods> _goods;
+    [SerializeField] private List<Items> _goods;
     [SerializeField] private Wallet _wallet;
 
-    [SerializeField] private Goods _meat;
-    [SerializeField] private Goods _apple;
-    [SerializeField] private Goods _parrot;
-    [SerializeField] private Goods _fish;
+    [SerializeField] private Items _meat;
+    [SerializeField] private Items _apple;
+    [SerializeField] private Items _parrot;
+    [SerializeField] private Items _fish;
 
-    [SerializeField] private Button _button;
-    [SerializeField] private Button _button2;
-    [SerializeField] private Button _button3;
-    [SerializeField] private Button _button4;
+    [SerializeField] private Button _buyMeatButton;
+    [SerializeField] private Button _buyAppleButton;
+    [SerializeField] private Button _buyParrotButton;
+    [SerializeField] private Button _buyFishButton;
 
-    private void Start()
+    private void Awake()
     {
-        foreach (var good in _goods)
-            good.ShowInfoByGoods();
+        _buyMeatButton.onClick.AddListener(BuyMeat);
+        _buyAppleButton.onClick.AddListener(BuyApple);
+        _buyParrotButton.onClick.AddListener(BuyParrot);
+        _buyFishButton.onClick.AddListener(BuyFish);
     }
+
+    private void OnDestroy()
+    {
+        _buyMeatButton.onClick.RemoveListener(BuyMeat);
+        _buyAppleButton.onClick.RemoveListener(BuyApple);
+        _buyParrotButton.onClick.RemoveListener(BuyParrot);
+        _buyFishButton.onClick.RemoveListener(BuyFish);
+    }
+
+    private void Update() => _wallet.UpdateMoneyText();
 
     public void BuyMeat()
     {
         if (_wallet.Money >= _meat.Price)
         {
             _wallet.Money -= _meat.Price;
-            _wallet.UpdateMoneyText();
-            _meat.BuyGoods();
-            _button.gameObject.SetActive(false);
+            _meat.BuyItems();
+            _buyMeatButton.enabled = false;
         }
     }
 
@@ -39,9 +50,8 @@ public class Shop : MonoBehaviour
         if (_wallet.Money >= _apple.Price)
         {
             _wallet.Money -= _apple.Price;
-            _wallet.UpdateMoneyText();
-            _apple.BuyGoods();
-            _button2.gameObject.SetActive(false);
+            _apple.BuyItems();
+            _buyAppleButton.enabled = false;
         }
     }
 
@@ -50,9 +60,8 @@ public class Shop : MonoBehaviour
         if (_wallet.Money >= _parrot.Price)
         {
             _wallet.Money -= _parrot.Price;
-            _wallet.UpdateMoneyText();
-            _parrot.BuyGoods();
-            _button3.gameObject.SetActive(false);
+            _parrot.BuyItems();
+            _buyParrotButton.enabled = false;
         }
     }
 
@@ -61,9 +70,8 @@ public class Shop : MonoBehaviour
         if (_wallet.Money >= _fish.Price)
         {
             _wallet.Money -= _fish.Price;
-            _wallet.UpdateMoneyText();
-            _fish.BuyGoods();
-            _button4.gameObject.SetActive(false);
+            _fish.BuyItems();
+            _buyFishButton.enabled = false;
         }
     }
 }

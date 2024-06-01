@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d1fdf43881c134a8e6c48a0aaac691, type: 3}
+  m_Script: {fileID: 11500000, guid: af013e312723ab543a13ea18e9befea1, type: 3}
   m_Name: GoodsMeat
   m_EditorClassIdentifier: 
-  _lable: "\u041C\u044F\u0441\u043E"
+  _label: 
   _description: "\u041A\u0443\u0441\u043E\u043A \u043C\u044F\u0441\u0430"
   _price: 5
-  _wallet: {fileID: 5038729492258260052, guid: 66f017d6a94aa0543906ea4d8d947e75, type: 3}
-  PrefabGoods: {fileID: 0}
-  PrefabSellGoods: {fileID: 0}
-  _buySprite: {fileID: 0}

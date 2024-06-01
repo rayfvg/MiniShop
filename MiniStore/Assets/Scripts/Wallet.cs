@@ -3,8 +3,10 @@ using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _textMoney;
-    public int Money;
+    public int Money { get => _money; set => _money = value; }
+
+    [SerializeField] private int _money;
+    [SerializeField] private TextMeshProUGUI _textMoney;
 
     public void UpdateMoneyText() => _textMoney.text = Money.ToString();
 

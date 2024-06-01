@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class GoodsViev : MonoBehaviour
+public class ItemsView : MonoBehaviour
 {
-    [SerializeField] private Goods _goods;
+    [SerializeField] private Items _goods;
 
-    [SerializeField] private string _lable;
+    [SerializeField] private string _label;
     [SerializeField] private string _description;
     [SerializeField] private int _price;
 
     private void Start()
     {
-        _lable = _goods.Lable;
+        _label = _goods.Label;
         _description = _goods.Description;
         _price = _goods.Price;
     }
